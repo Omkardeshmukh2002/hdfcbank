@@ -1,0 +1,138 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Your styles */
+.logo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 33%;
+    border: 3px solid white;
+    border-radius: 50px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+    padding: 20px 0;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-list li {
+    padding: 0 15px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: rgb(26, 29, 205);
+}
+
+.nav-list li a:hover {
+    color: gray;
+}
+
+.rightnav {
+    display: flex;
+    align-items: center;
+}
+
+#search {
+    padding: 5px;
+    font-size: 17px;
+    border: 2px solid grey;
+    border-radius: 9px;
+    margin-right: 10px;
+}
+
+/* Your styles */
+.background {
+    background: url("img/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+/* Rest of your styles */
+
+
+.firstSection {
+    height: 100vh;
+}
+
+.box-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 50%;
+    margin: auto;
+    height: 80%;
+    padding: 50px;
+}
+
+.firstHalf {
+    width: 80%;
+}
+
+.secondHalf {
+    width: 30%;
+}
+
+.secondHalf img {
+    width: 70%;
+    border: 4px solid white;
+    border-radius: 200px;
+    display: block;
+    margin: auto;
+}
+
+.text-big {
+    font-size: 41px;
+}
+
+.text-small {
+    font-size: 18px;
+}
+
+.btn {
+    padding: 8px 20px;
+    margin: 7px 0;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+slide image code add
+/<div class="secondHalf">
+                <img src="img/first back.jpeg" alt="Laptop Image">
+            </div>
+            <section class="background firstSection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <p class="text-big">The Text Goes Here</p>
+                <p class="text-small">More text goes here...</p>
+                <div class="button">
+                    <button class="btn">Subscribe</button>
+                    <button class="btn">Watch Video</button>
+                </div>
+            </div>
+            
+         
+    </section>

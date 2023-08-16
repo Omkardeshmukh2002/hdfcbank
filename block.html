@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Block ATM/Debit Card</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('img/oneee.jpeg'); /* Replace with your image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to the card */
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-title {
+            font-weight: bold;
+            color: #333;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title text-center mb-4">Block ATM Card</h2>
+                        <p class="card-text">If you have misplaced or lost your State Bank ATM cum Debit Card, you can block the card using this functionality.</p>
+                        <p class="card-text">Before proceeding ahead, please ensure that you have registered your mobile number with the Bank.</p>
+                        <p class="card-text">If Mobile No. & Account No. are valid, you will receive an OTP on your registered mobile.</p>
+                        <p class="card-text">Enter the OTP received on your mobile. All cards issued in the account will be displayed (partially masked).</p>
+                        <p class="card-text">Please select the card number you want to block and click on the submit button.</p>
+                        <p class="card-text"><strong>Caution!</strong> Once a card is blocked, you cannot unblock it online.</p>
+                        
+                        <div class="text-center mt-4">
+                            <button class="btn btn-primary" onclick="window.location.href = 'blockatmcard.html';">Next Step</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function nextStep() {
+            alert('You have taken the next step!');
+            // You can add more functionality here
+        }
+    </script>
+</body>
+</html>

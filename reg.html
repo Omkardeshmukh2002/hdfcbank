@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Registration Form</h2>
+        <form id="registrationForm"  action="registration.php"   method="post">
+            <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address" name="address" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="mb-3">
+                <label for="contact" class="form-label">Contact</label>
+                <input type="tel" class="form-control" id="contact" name="contact" pattern="[0-9]{10}" required>
+            </div>
+            <div class="mb-3">
+                <label for="gender" class="form-label">Gender</label>
+                <select class="form-select" id="gender" name="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="panCard" class="form-label">PAN Card No</label>
+                <input type="text" class="form-control" id="panCard" name="panCard" required>
+            </div>
+            <div class="mb-3">
+                <label for="aadharCard" class="form-label">Aadhar Card No</label>
+                <input type="text" class="form-control" id="aadharCard" name="aadharCard" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            const fullName = document.getElementById("fullName").value;
+            const address = document.getElementById("address").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const contact = document.getElementById("contact").value;
+            const gender = document.getElementById("gender").value;
+            const panCard = document.getElementById("panCard").value;
+            const aadharCard = document.getElementById("aadharCard").value;
+
+            if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                event.preventDefault();
+            }
+
+            if (!validatePassword(password)) {
+                alert("Password must be at least 6 characters long.");
+                event.preventDefault();
+            }
+
+            if (!validateContact(contact)) {
+                alert("Please enter a valid 10-digit contact number.");
+                event.preventDefault();
+            }
+        });
+
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        function validatePassword(password) {
+            return password.length >= 6;
+        }
+
+        function validateContact(contact) {
+            const contactRegex = /^[0-9]{10}$/;
+            return contactRegex.test(contact);
+        }
+    </script>
+</body>
+</html>

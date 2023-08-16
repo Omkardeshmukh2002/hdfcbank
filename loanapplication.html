@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application Form</title>
+   <style>
+    /* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Your styles */
+.logo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 33%;
+    border: 3px solid white;
+    border-radius: 50px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+    padding: 20px 0;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-list li {
+    padding: 0 15px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: rgb(26, 29, 205);
+}
+
+.nav-list li a:hover {
+    color: gray;
+}
+
+.rightnav {
+    display: flex;
+    align-items: center;
+}
+
+#search {
+    padding: 5px;
+    font-size: 17px;
+    border: 2px solid grey;
+    border-radius: 9px;
+    margin-right: 10px;
+}
+
+/* Your styles */
+.background {
+    background: url("img/life.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+/* Rest of your styles */
+
+
+.firstSection {
+    height: 100vh;
+}
+
+.box-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 50%;
+    margin: auto;
+    height: 80%;
+    padding: 50px;
+}
+
+.firstHalf {
+    width: 80%;
+}
+
+.secondHalf {
+    width: 30%;
+}
+
+.secondHalf img {
+    width: 70%;
+    border: 4px solid white;
+    border-radius: 200px;
+    display: block;
+    margin: auto;
+}
+
+.text-big {
+    font-size: 41px;
+}
+
+.text-small {
+    font-size: 18px;
+}
+
+.btn {
+    padding: 8px 20px;
+    margin: 7px 0;
+    border: 2px solid white;
+    border-radius: 8px;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+body {
+    background: url("img/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+    margin: 0;
+    padding: 0;
+    
+        
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color:white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+div {
+  opacity: 0.5;
+}
+
+   </style>
+</head>
+<body>
+   
+    <div class="container">
+        <h1>Loan Application Form</h1>
+        <form action="#">
+            <form id="applications"  action="loan.php"   method="post"></form>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="loan-amount">Loan Amount:</label>
+            <input type="number" id="loan-amount" name="loan-amount" required>
+
+            <label for="loan-purpose">Loan Purpose:</label>
+            <select id="loan-purpose" name="loan-purpose" required>
+                <option value="" disabled selected>Select Loan Purpose</option>
+                <option value="home">Home Loan</option>
+                <option value="car">Car Loan</option>
+                <option value="education">Education Loan</option>
+                <option value="personal">Personal Loan</option>
+            </select>
+
+            <label for="employment">Employment Status:</label>
+            <input type="radio" id="employed" name="employment" value="employed" required>
+            <label for="employed">Employed</label>
+            <input type="radio" id="unemployed" name="employment" value="unemployed" required>
+            <label for="unemployed">Unemployed</label>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>
